@@ -16,8 +16,10 @@ func main() {
 
 	http.HandleFunc("/hello", myhandler)
 
+	http.HandleFunc("/", myhandler)
+
 	// http.Handle("dfdf", fs)
 
 	log.Println("Listening...")
-	http.ListenAndServe(":8888", nil)
+	http.ListenAndServe("",nil)
 }
