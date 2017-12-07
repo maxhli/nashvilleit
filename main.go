@@ -19,5 +19,5 @@ func main() {
 	// http.Handle("dfdf", fs)
 
 	log.Println("Listening...")
-	http.ListenAndServe(":3000", nil)
+	http.ListenAndServe(":80", nil)
 }
