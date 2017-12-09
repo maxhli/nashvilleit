@@ -20,7 +20,6 @@ func RootHandler(res http.ResponseWriter, req *http.Request) {
 
 func main() {
 
-	//http.HandleFunc("/", viewHandler)
 	http.HandleFunc("/", RootHandler)
 
 	http.Handle("/public/", http.StripPrefix("/public/",
