@@ -7,7 +7,7 @@
     "sample",
     "example"
   ],
-  "image": "heroku/go:1.9.2",
+  "image": "heroku/go:1.9",
   "mount_dir": "src/github.com/maxhli/nashvilleit",
   "website": "http://github.com/maxhli/nashvilleit",
   "repository": "http://github.com/maxhli/nashvilleit"
