@@ -6,21 +6,12 @@ import (
 	"net/http"
 	"fmt"
 	"os"
-	"html/template"
 	"io/ioutil"
 )
 
 func myhandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintln(w, "hehhehehehheheheheheh!")
 }
-
-func viewHandler(w http.ResponseWriter, r *http.Request) {
-	title := "templates/index.tmpl.html"
-	t, _ := template.ParseFiles(
-		title, "templates/header.tmpl.html", "templates/nav.tmpl.html")
-	fmt.Println("t is: ", t)
-	t.ExecuteTemplate(w, title, nil)
-	}
 
 func RootHandler(res http.ResponseWriter, req *http.Request) {
 	file, _ := ioutil.ReadFile("templates/index.tmpl.html")
