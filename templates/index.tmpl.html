@@ -1,8 +1,55 @@
 <html>
-  {{template "header.tmpl.html"}}
-<body>
-  {{template "nav.tmpl.html"}}
+<title>Learning SQL in the context of Go, HTML/CSS, Bootstrap and Heroku</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/main.css" />
 
+
+<link rel="stylesheet"
+      href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+
+<body>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/"><span class="glyphicon glyphicon-home"></span>Home</a>
+            </li>
+            <li>
+                <a href="http://online.uu.edu">
+                    <span class="glyphicon glyphicon-user"></span> MoodleRooms Online Learning System</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <span class="glyphicon glyphicon-info-sign">
+            </span> Getting Started Guides <span class="caret">
+        </span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="http://golang.org">
+                        Go programming Language</a>
+                    </li>
+                    <li><a href="https://www.w3.org/html/">
+                        HTML</a>
+                    </li>
+                    <li><a href="https://www.w3.org/Style/CSS/">
+                        CSS</a>
+                    </li>
+                    <li><a href="http://getbootstrap.com">
+                        Bootstrap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-right">
+                <a href="https://www.w3schools.com/sql/default.asp">
+                    <span class="glyphicon glyphicon-book"></span> SQL Tutorial</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 
   <div class="jumbotron text-center">
@@ -19,7 +66,6 @@
 
   <div class="container">
 <div class="text-center" style="padding-bottom: 10px">
-      <a class="btn btn-success" href="/books/create">Create a new book</a>
 </div>
 
   <table class="table table-responsive table-striped
@@ -46,43 +92,6 @@
       </tr>
       </thead>
 
-      {{range .}}
-    <tr>
-      <td>
-        {{.Isbn}}
-      </td>
-      <td>
-        {{.Title}}
-      </td>
-      <td>
-        {{.Author}}
-      </td>
-      <td>
-        {{.Price}}
-      </td>
-
-        <td class="text-center">
-            <a class ="btn btn-primary"
-               href="/books/select/{{.Isbn}}">
-                <i class="icon-lg ion-more"
-                   title="More...">
-                </i></a>
-            <a class ="btn btn-warning"
-               href="/books/update/{{.Isbn}}">
-                <i class="icon-lg ion-edit"
-                   title="Edit">
-                </i>
-            </a>
-            <a class ="btn btn-danger"
-               href="/books/delete/{{.Isbn}}">
-                <i class="icon-lg ion-close-round"
-                   title="Delete">
-                </i>
-            </a>
-        </td>
-
-    </tr>
-  {{end }}
     <tr>
         <td></td>
         <td></td>
