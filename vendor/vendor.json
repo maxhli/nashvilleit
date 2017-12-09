@@ -1,7 +1,6 @@
 {
   "rootPath": "github.com/maxhli/nashvilleit",
   "heroku": {
-    "install" : [ "./..." ],
     "goVersion": "go1.9.2"
   },
 }
