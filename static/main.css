@@ -17,8 +17,7 @@
     display: block;
     overflow: hidden;
     width:300px;
-    margin: auto;
-    border: 2px solid white; }
+    margin: auto;}
     .jumbotron .lang-logo img {
       max-width: 100%; }
 
